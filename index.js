@@ -86,7 +86,7 @@ function createRock(x) {
     }
 }
   // We should kick of the animation of the rock around here
-moveRock()
+moveRock();
   // Finally, return the rock element you've created
   ROCKS.push(rock);
   return rock;
@@ -114,7 +114,6 @@ function endGame() {
 
 
 function moveDodger(e) {
-  // implement me!
   if (e.which === LEFT_ARROW) {
     e.stopPropagation();
     e.preventDefault();
@@ -158,7 +157,7 @@ function positionToInteger(p) {
 
 function start() {
   window.addEventListener('keydown', moveDodger)
-  console.log(`starting`)
+
   START.style.display = 'none'
 
   gameInterval = setInterval(function() {
