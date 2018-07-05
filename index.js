@@ -100,7 +100,7 @@ moveRock()
  */
 function endGame() {
   while(ROCKS.length > 0){
-    GAME.removeChild(ROCKS);
+    ROCKS = [];
     //GAME.removeChild(ROCKS[0]);
     ROCKS.shift();
   }
