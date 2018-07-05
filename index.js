@@ -60,7 +60,6 @@ function createRock(x) {
    * seems like a good pace.)
    */
   function moveRock() {
-    console.log(`moveRock`)
     // implement me!
     // (use the comments below to guide you!)
     /**
@@ -76,8 +75,6 @@ function createRock(x) {
        */
       GAME.removeChild(rock);
       ROCKS.shift();
-
-
     } else if (top < GAME_HEIGHT-20){
       /**
        * Otherwise, if the rock hasn't reached the bottom of
