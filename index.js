@@ -143,7 +143,7 @@ function moveDodgerRight() {
      DODGER.style.left = `${left + 4}px`
    }
  }
- 
+
 /**
  * @param {string} p The position property
  * @returns {number} The position as an integer (without 'px')
