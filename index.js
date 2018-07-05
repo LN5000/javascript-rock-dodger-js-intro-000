@@ -147,7 +147,7 @@ function moveDodger(e) {
      * we've declared for you above.)
      * And be sure to use the functions declared below!
      */
-     
+
     function moveDodgerLeft() {
       // implement me!
       var leftNumbers = DODGER.style.left.replace('px', '')
@@ -175,15 +175,15 @@ function moveDodger(e) {
  }
 }
 
-
-
-   
-
-
 /**
- * @param {string} p The position property
+ * @param {string} p The position property 
  * @returns {number} The position as an integer (without 'px')
  */
+
+
+
+
+
 function positionToInteger(p) {
   return parseInt(p.split('px')[0]) || 0
 }
