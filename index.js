@@ -119,17 +119,16 @@ function moveDodger(e) {
     e.stopPropagation();
     e.preventDefault();
     moveDodgerLeft()
-  } else if (e.which === RIGHT_ARROW) {
+  } 
+  else if (e.which === RIGHT_ARROW) {
     e.stopPropagation();
     e.preventDefault();
     moveDodgerRight()
-      }
+  }
 }
 
 function moveDodgerLeft() {
-  // implement me!
-  var leftNumbers = DODGER.style.left.replace('px', '')
-  var left = parseInt(leftNumbers, 10)
+  const left = positionToInteger(dodger.style.left);
   if (left > 0) {
     DODGER.style.left = `${left - 4}px`
     window.requestAnimationFrame(moveDodgerLeft);
@@ -137,9 +136,7 @@ function moveDodgerLeft() {
 }
 
 function moveDodgerRight() {
-   // implement me!
-   var leftNumbers = DODGER.style.left.replace('px', '')
-   var left = parseInt(leftNumbers, 10)
+   const left = positionToInteger(dodger.style.left);
    if (left < 360) {
      DODGER.style.left = `${left + 4}px`
      window.requestAnimationFrame(moveDodgerRight);
