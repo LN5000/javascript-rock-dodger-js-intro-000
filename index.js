@@ -119,7 +119,7 @@ function moveDodger(e) {
     e.stopPropagation();
     e.preventDefault();
     moveDodgerLeft()
-  } 
+  }
   else if (e.which === RIGHT_ARROW) {
     e.stopPropagation();
     e.preventDefault();
@@ -137,7 +137,7 @@ function moveDodgerLeft() {
 
 function moveDodgerRight() {
    const left = positionToInteger(dodger.style.left);
-   if (left < 360) {
+   if (left < GAME_WIDTH - 40) {
      DODGER.style.left = `${left + 4}px`
      window.requestAnimationFrame(moveDodgerRight);
    }
