@@ -124,7 +124,7 @@ function moveDodger(e) {
     e.preventDefault();
     moveDodgerRight()
       }
-    
+
 
     function moveDodgerLeft() {
       // implement me!
