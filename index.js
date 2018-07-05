@@ -84,7 +84,7 @@ function createRock(x) {
       ROCKS.shift();
 
 
-    } else {
+    } else if (top < GAME_HEIGHT-2o){
       /**
        * Otherwise, if the rock hasn't reached the bottom of
        * the GAME, we want to move it again.
