@@ -139,41 +139,45 @@ function moveDodger(e) {
     moveDodgerRight()
       }
     })
+
+    /**
+     * This function should call `moveDodgerLeft()`
+     * if the left arrow is pressed and `moveDodgerRight()`
+     * if the right arrow is pressed. (Check the constants
+     * we've declared for you above.)
+     * And be sure to use the functions declared below!
+     */
+     
+    function moveDodgerLeft() {
+      // implement me!
+      var leftNumbers = DODGER.style.left.replace('px', '')
+      var left = parseInt(leftNumbers, 10)
+      if (left > 0) {
+        DODGER.style.left = `${left - 4}px`
+      }
+   /**
+    * This function should move DODGER to the left
+    * (mabye 4 pixels?). Use window.requestAnimationFrame()!
+    */
+ }
+
+ function moveDodgerRight() {
+   // implement me!
+   var leftNumbers = DODGER.style.left.replace('px', '')
+   var left = parseInt(leftNumbers, 10)
+   if (left < 360) {
+     DODGER.style.left = `${left + 4}px`
+   }
+   /**
+    * This function should move DODGER to the right
+    * (mabye 4 pixels?). Use window.requestAnimationFrame()!
+    */
+ }
 }
-  /**
-   * This function should call `moveDodgerLeft()`
-   * if the left arrow is pressed and `moveDodgerRight()`
-   * if the right arrow is pressed. (Check the constants
-   * we've declared for you above.)
-   * And be sure to use the functions declared below!
-   */
 
 
-function moveDodgerLeft() {
-  // implement me!
-  var leftNumbers = DODGER.style.left.replace('px', '')
-  var left = parseInt(leftNumbers, 10)
-  if (left > 0) {
-    DODGER.style.left = `${left - 4}px`
-  }
-  /**
-   * This function should move DODGER to the left
-   * (mabye 4 pixels?). Use window.requestAnimationFrame()!
-   */
-}
 
-function moveDodgerRight() {
-  // implement me!
-  var leftNumbers = DODGER.style.left.replace('px', '')
-  var left = parseInt(leftNumbers, 10)
-  if (left < 360) {
-    DODGER.style.left = `${left + 4}px`
-  }
-  /**
-   * This function should move DODGER to the right
-   * (mabye 4 pixels?). Use window.requestAnimationFrame()!
-   */
-}
+   
 
 
 /**
