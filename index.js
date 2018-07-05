@@ -57,6 +57,8 @@ function createRock(x) {
 
   // Hmmm, why would we have used `var` here?
   var top = 0
+  // Add the rock to ROCKS so that we can remove all rocks
+  // when there's a collision
 
   rock.style.top = top
   ROCKS.push(rock);
@@ -101,12 +103,9 @@ function createRock(x) {
 
   // We should kick of the animation of the rock around here
 moveRock()
-  // Add the rock to ROCKS so that we can remove all rocks
-  // when there's a collision
 
   // Finally, return the rock element you've created
   return rock;
-
 }
 
 /**
@@ -139,7 +138,6 @@ function moveDodger(e) {
     moveDodgerRight()
       }
     })
-
     /**
      * This function should call `moveDodgerLeft()`
      * if the left arrow is pressed and `moveDodgerRight()`
@@ -147,7 +145,6 @@ function moveDodger(e) {
      * we've declared for you above.)
      * And be sure to use the functions declared below!
      */
-
     function moveDodgerLeft() {
       // implement me!
       var leftNumbers = DODGER.style.left.replace('px', '')
@@ -160,7 +157,6 @@ function moveDodger(e) {
     * (mabye 4 pixels?). Use window.requestAnimationFrame()!
     */
  }
-
  function moveDodgerRight() {
    // implement me!
    var leftNumbers = DODGER.style.left.replace('px', '')
