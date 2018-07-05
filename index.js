@@ -54,9 +54,7 @@ function createRock(x) {
   // Add the rock to ROCKS so that we can remove all rocks
   // when there's a collision
 
-  rock.style.top = top
-  ROCKS.push(rock);
-
+  rock.style.top = `${top}px`
   /**
    * Now that we have a rock, we'll need to append
    * it to GAME and move it downwards.
@@ -82,8 +80,8 @@ function createRock(x) {
        * But if the rock *has* reached the bottom of the GAME,
        * we should remove the rock from the DOM
        */
-      var rockindex = ROCKS.indexOf(rock);
-      ROCKS.splice(rockindex, 1);
+      GAME.removeChild(rock);
+      ROCKS.shift();
 
 
     } else {
@@ -95,16 +93,11 @@ function createRock(x) {
       rock.style.top = `${top}px`
       window.requestAnimationFrame(moveRock);
     }
-
-
 }
-
-
-
   // We should kick of the animation of the rock around here
 moveRock()
-
   // Finally, return the rock element you've created
+  ROCKS.push(rock);
   return rock;
 }
 
