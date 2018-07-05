@@ -124,26 +124,26 @@ function moveDodger(e) {
     e.preventDefault();
     moveDodgerRight()
       }
-
-
-    function moveDodgerLeft() {
-      // implement me!
-      var leftNumbers = DODGER.style.left.replace('px', '')
-      var left = parseInt(leftNumbers, 10)
-      if (left > 0) {
-        DODGER.style.left = `${left - 4}px`
-      }
-    }
-     function moveDodgerRight() {
-       // implement me!
-       var leftNumbers = DODGER.style.left.replace('px', '')
-       var left = parseInt(leftNumbers, 10)
-       if (left < 360) {
-         DODGER.style.left = `${left + 4}px`
-       }
-     }
 }
 
+function moveDodgerLeft() {
+  // implement me!
+  var leftNumbers = DODGER.style.left.replace('px', '')
+  var left = parseInt(leftNumbers, 10)
+  if (left > 0) {
+    DODGER.style.left = `${left - 4}px`
+  }
+}
+
+function moveDodgerRight() {
+   // implement me!
+   var leftNumbers = DODGER.style.left.replace('px', '')
+   var left = parseInt(leftNumbers, 10)
+   if (left < 360) {
+     DODGER.style.left = `${left + 4}px`
+   }
+ }
+ 
 /**
  * @param {string} p The position property
  * @returns {number} The position as an integer (without 'px')
