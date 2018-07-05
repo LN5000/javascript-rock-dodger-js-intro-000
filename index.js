@@ -27,14 +27,9 @@ function checkCollision(rock) {
   // GAME_HEIGHT - 20 - 20 = 360px;
   if (top > 360) {
     const dodgerLeftEdge = positionToInteger(DODGER.style.left)
-
-    // FIXME: The DODGER is 40 pixels wide -- how do we get the right edge?
     const dodgerRightEdge = dodgerLeftEdge + 40;
     const rockLeftEdge = positionToInteger(rock.style.left)
-    // FIXME: The rock is 20 pixel's wide -- how do we get the right edge?
     const rockRightEdge = rockLeftEdge + 20;
-
-
     return (
     //  * 1. The rock's left edge is < the DODGER's left edge,
     //  *    and the rock's right edge is > the DODGER's left edge;
@@ -45,7 +40,6 @@ function checkCollision(rock) {
     //  * 3. The rock's left edge is < the DODGER's right edge,
     //  *    and the rock's right edge is > the DODGER's right edge
       (rockLeftEdge <= dodgerRightEdge && rockRightEdge >= dodgerRightEdge))
-
   }
 }
 
@@ -90,8 +84,8 @@ function createRock(x) {
        */
       var rockindex = ROCKS.indexOf(rock);
       ROCKS.splice(rockindex, 1);
-        
-       
+
+
     } else {
       /**
        * Otherwise, if the rock hasn't reached the bottom of
@@ -100,9 +94,9 @@ function createRock(x) {
       top+=4;
       rock.style.top = `${top}px`
       window.requestAnimationFrame(moveRock);
-    } 
-  
-     
+    }
+
+
 }
 
 
@@ -178,7 +172,7 @@ function moveDodger(e) {
 }
 
 /**
- * @param {string} p The position property 
+ * @param {string} p The position property
  * @returns {number} The position as an integer (without 'px')
  */
 
